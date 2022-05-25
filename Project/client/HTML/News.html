@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AGA | Pagina principala</title>
+    <link rel="stylesheet" href="../CSS/News.css">
+    <link rel="stylesheet" href="../CSS/News_CarouselSplitscreenVertical.css">
+    <link rel="stylesheet" href="../CSS/CarouselZigZag.css">
+
+</head>
+<body>
+<div class="UpperContainer">
+    <div class="meniu">
+        <img src="../../Resources/Images/logo.png" class="logo" onclick="openImg()" alt="">
+        <nav class="elements">
+            <a href="Index.html">HOME  </a>
+            <a href="Calendar.html">CALENDAR</a>
+            <a href="News.html">NEWS</a>
+            <div id="indicator"></div>
+        </nav>
+        <div class="search">
+            <img src="../../Resources/Images/Magnifier.png" class="magnifier-icon" alt="">
+            <div class="input">
+                <label for="mysearch"></label><input type="text" placeholder="Search" id="mysearch">
+            </div>
+            <span class="clear" onclick="document.getElementById('mysearch').value=''"></span>
+        </div>
+        <div class="hamburger-menu">
+            <input id="menu__toggle" type="checkbox" />
+            <label class="menu__btn" for="menu__toggle">
+                <span></span>
+            </label>
+
+            <ul class="menu__box">
+                <li><a class="menu__item" href="Index.html">Home</a></li>
+                <li><a class="menu__item" href="FirstPage.html">Celebrities</a></li>
+                <li><a class="menu__item" href="Calendar.html">Calendar</a></li>
+                <ul class="submenu">
+                    <li><a class="submenu__item" href="#">Anual events </a></li>
+                    <li><a class="submenu__item" href="#">Calendar for this month</a></li>
+                </ul>
+                <li><a class="menu__item" href="News.html">News</a></li>
+                <ul class="submenu">
+                    <li><a class="submenu__item" href="ActorPage.html">Actors</a></li>
+                    <li><a class="submenu__item" href="FilmPage.html">Films</a></li>
+                </ul>
+                <li><a class="menu__item" href="AdminLogin.html">Admin Login</a></li>
+                <li><a class="menu__item" href="DashboardAdmin.html">Dashboard</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="UpperPart">
+        <div id="galleryView1">
+            <div id="galleryContainer1">
+                <div id="mainView1"></div>
+            </div>
+        </div>
+        <div class="middlePart">
+            <button class = "upperBtn" onclick="scrollDown(0)" style="transform: translateY(0%);"><p>News</p></button>
+            <button class = "upperBtn" onclick="scrollDown(1)" style="transform: translateY(100%);"><p>Actor's Stories</p></button>
+            <button class = "upperBtn" onclick="scrollDown(2)" style="transform: translateY(200%);"><p>Best Dressed</p></button>
+
+        </div>
+        <div id="galleryView2">
+            <div id="galleryContainer2">
+                <div id="mainView2"></div>
+            </div>
+        </div>
+        <script src="../JS/News.js"></script>
+    </div>
+</div>
+
+<div class="border">
+</div>
+<div class="zig-zag">
+    <div class="zig-zag1">
+        <div class="left">
+            <div class="text-box">
+                <h1>News-SAG Awards 2022 Winners</h1>
+                <p>Screen Actors Guild Awards (also known as SAG Awards) are accolades given by the Screen
+                    Actors Guild-American Federation of Television and Radio Artists (SAG-AFTRA). The award was
+                    founded in 1952 to recognize outstanding performances in movie and prime time television.
+                    SAG Awards have been one of the major awards events in the Hollywood film industry since 1995.</p>
+            </div>
+        </div>
+        <div class="rigth">
+            <div id="galleryView_zig-zag1">
+                <div id="galleryContainer_zig-zag1">
+                    <div id="mainView3">
+                        <div class="slideText" id="mainText1"></div>
+                        <a class="prev" id="left1" onclick="abcd(2)">&#10094;</a>
+                        <a class="next" id="right1" onclick="scrollRight(2)">&#10095;</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="zig-zag2">
+        <div class="left">
+            <div id="galleryView_zig-zag2">
+                <div id="galleryContainer_zig-zag2">
+                    <div id="mainView4">
+                        <div class="slideText" id="mainText2"></div>
+                        <a class="prev" id="left2" onclick="abcd(3)">&#10094;</a>
+                        <a class="next" id="right2" onclick="scrollRight(3)">&#10095;</a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-box">
+                <h1>Actor's Stories</h1>
+                <p class="specialText">
+                    They all started with a dream...
+
+                </p>
+                <p class="Normaltext">
+                    There is a tradition of opening the Screen Actors Guild Awards, with a distinguished actor telling the audience something about their perceptions of their profession or a short biographical anecdote.
+                    Since the Inaugural Screen Actors Guild Awards, 107 actors have told their stories, typically closing with their name and
+                    the signature line, "I am an actor."
+
+                </p>
+            </div>
+        </div>
+        <div class="rigth">
+            <div class="text-box">
+                <h1>Actor's Stories</h1>
+                <p class="specialText">
+                    They all started with a dream...
+
+                </p>
+                <p class="Normaltext">
+                    There is a tradition of opening the Screen Actors Guild Awards, with a distinguished actor telling the audience something about their perceptions of their profession or a short biographical anecdote.
+                    Since the Inaugural Screen Actors Guild Awards, 107 actors have told their stories, typically closing with their name and
+                    the signature line, "I am an actor."
+
+                </p>
+            </div>
+            <div id="galleryView_zig-zag6">
+                <div id="galleryContainer_zig-zag6">
+                    <div id="mainView6">
+                        <div class="slideText" id="mainText6"></div>
+                        <a class="prev" id="leftspecial6" onclick="abcd(5)">&#10094;</a>
+                        <a class="next" id="rightspecial6" onclick="scrollRight(5)">&#10095;</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="zig-zag3">
+        <div class="left">
+            <div class="text-box">
+                <h1>Our best dressed celebrities at 2022 SAG Awards</h1>
+                <p>
+                    Lights, camera, action, and dresses! It was a glorious sight to behold on February 28th, 2022, as we saw many of our favourite celebrities walk the red carpet in stunning designer outfits at the Screen Actor Guild (SAG) awards.
+                    From Lady GaGa's showstopping white Armani Prive column gown with a sequin bodice to Cynthia Erivo's custom Louis Vuitton vinyl strapless gown, we can boldly agree that the red carpet was truly a magical moment.
+                </p>
+            </div>
+        </div>
+        <div class="rigth">
+            <div id="galleryView_zig-zag3">
+                <div id="galleryContainer_zig-zag3">
+                    <div id="mainView5">
+                        <div class="slideText" id="mainText3"></div>
+                        <a class="prev" id="left3" onclick="abcd(4)">&#10094;</a>
+                        <a class="next" id="right3" onclick="scrollRight(4)">&#10095;</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="border2">
+</div>
+<div class="underSite">
+    <div class="textBar">
+        <h1>Follow us: </h1>
+    </div>
+    <div class="pageFollow">
+        <a onclick=" window.open('https://www.facebook.com/sagawardsofficialpage/')">
+            <img src="../../Resources/Images/facebook.png" class="fb" alt="">
+        </a>
+        <a onclick=" window.open('https://www.instagram.com/sagawards/')">
+            <img src="../../Resources/Images/instagram.png" class="ig" alt="">
+        </a>
+        <a onclick=" window.open('https://twitter.com/sagawards','_blank')">
+            <img src="../../Resources/Images/twitter.ico" class="tw" alt="">
+        </a>
+        <a onclick=" window.open('https://www.tiktok.com/@sagawards','_blank')">
+            <img src="../../Resources/Images/tiktok.png" class="tk" alt="">
+        </a>
+    </div>
+</div>
+</body>
+</html>

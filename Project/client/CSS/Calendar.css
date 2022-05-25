@@ -1,0 +1,317 @@
+.calendar {
+    padding-top: 35%;
+    background: linear-gradient(#997F4A, #DCC98E);
+    width: 400%;
+    z-index: 0;
+    height: 200vh;
+}
+.description {
+    font-family: "Unica One", sans-serif;
+    font-size: 1.0rem;
+    position: absolute;
+    display: block;
+    /*right: 1rem;
+     */
+    left: 1rem;
+    text-align: left;
+    top: 50%;
+    font-weight: bold;
+    margin: auto;
+    color: #efc36a;
+    z-index: 100;
+    opacity: 0;
+    transform: translate3d(0, -50%, 0);
+    transition: 0.3s 0s;
+}
+
+li:hover .description {
+    opacity: 1;
+    transition: 0.6s 0.3s;
+}
+
+header {
+    padding: 1rem;
+    font-family: "Courier New", monospace, serif;
+    font-size: 1em;
+}
+
+h1 {
+    margin-top: 0;
+}
+
+p {
+    line-height: 1.4;
+}
+@media (min-width: 40em) {
+    body {
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        z-index: 0;
+    }
+}
+/*img,*/
+a {
+    display: block;
+    height: 100%;
+}
+.grid img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.grid {
+    display: grid;
+    grid-gap: 0;
+    overflow: hidden;
+    list-style: none;
+    margin: 0;
+    padding: 5%;
+    height:auto;
+    z-index: 0;
+}
+.grid li {
+    position: relative;
+}
+.grid li:hover ~ li:last-child:after,
+.grid li:last-child:hover:after,
+.grid li:hover ~ li:last-child:before,
+.grid li:last-child:hover:before {
+    opacity: 1;
+    transition: 1s ease;
+}
+.grid li:last-child:after,
+.grid li:last-child:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    pointer-events: none;
+    clip-path: polygon(var(--offset) var(--offset), var(--offset) calc(100% - var(--offset)), calc(100% - var(--offset)) calc(100% - var(--offset)), calc(100% - var(--offset)) var(--offset));
+    -webkit-clip-path: polygon(var(--offset) var(--offset), var(--offset) calc(100% - var(--offset)), calc(100% - var(--offset)) calc(100% - var(--offset)), calc(100% - var(--offset)) var(--offset));
+    opacity: 0;
+    transition: opacity 1s, transform 1s 1s, background 1s;
+}
+.grid li:last-child:after {
+    mix-blend-mode: multiply;
+    background: #aaafc3;
+}
+.grid li:last-child:before {
+    backdrop-filter: grayscale(100%) blur(2px);
+    -webkit-backdrop-filter: grayscale(100%) blur(2px);
+}
+.grid li:nth-child(1):hover ~ li:last-child:after {
+    background: #1A237E;
+}
+.grid li:nth-child(2):hover ~ li:last-child:after {
+    background: #b5a1b7;
+}
+.grid li:nth-child(3):hover ~ li:last-child:after {
+    background: #aaafc3;
+}
+.grid li:nth-child(4):hover ~ li:last-child:after {
+    background: #daa384;
+}
+.grid li:nth-child(5):hover ~ li:last-child:after {
+    background: #aaa5d6;
+}
+.grid li:nth-child(6):hover ~ li:last-child:after {
+    background: #6c4331;
+}
+.grid li:nth-child(7):hover ~ li:last-child:after {
+    background: #555;
+}
+.grid li:last-child:hover:after {
+    background: #a88504;
+}
+
+.grid {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 33.3333333333%);
+}
+.grid li:last-child:after,
+.grid li:last-child:before {
+    left: 100%;
+    transform: translate3d(-100%, -100%, 0);
+}
+.grid li:nth-child(1):hover ~ li:last-child:after,
+.grid li:nth-child(1):hover ~ li:last-child:before {
+    transform: translate3d(-200%, -200%, 0);
+}
+.grid li:nth-child(2):hover ~ li:last-child:after,
+.grid li:nth-child(2):hover ~ li:last-child:before {
+    transform: translate3d(-100%, -200%, 0);
+}
+.grid li:nth-child(3):hover ~ li:last-child:after,
+.grid li:nth-child(3):hover ~ li:last-child:before {
+    transform: translate3d(0%, -200%, 0);
+}
+.grid li:nth-child(4):hover ~ li:last-child:after,
+.grid li:nth-child(4):hover ~ li:last-child:before {
+    transform: translate3d(-200%, -100%, 0);
+}
+.grid li:nth-child(5):hover ~ li:last-child:after,
+.grid li:nth-child(5):hover ~ li:last-child:before {
+    transform: translate3d(-100%, -100%, 0);
+}
+.grid li:nth-child(6):hover ~ li:last-child:after,
+.grid li:nth-child(6):hover ~ li:last-child:before {
+    transform: translate3d(0%, -100%, 0);
+}
+.grid li:nth-child(7):hover ~ li:last-child:after,
+.grid li:nth-child(7):hover ~ li:last-child:before {
+    transform: translate3d(-200%, 0%, 0);
+}
+.grid li:last-child:hover:after,
+.grid li:last-child:hover:before {
+    transform: translate3d(-100%, 0%, 0);
+}
+
+@media (max-width: 60em) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, 25%);
+    }
+    .grid li:last-child:after,
+    .grid li:last-child:before {
+        left: 0%;
+        transform: translate3d(-50%, -150%, 0);
+    }
+    .grid li:nth-child(1):hover ~ li:last-child:after,
+    .grid li:nth-child(1):hover ~ li:last-child:before {
+        transform: translate3d(-100%, -300%, 0);
+    }
+    .grid li:nth-child(2):hover ~ li:last-child:after,
+    .grid li:nth-child(2):hover ~ li:last-child:before {
+        transform: translate3d(0%, -300%, 0);
+    }
+    .grid li:nth-child(3):hover ~ li:last-child:after,
+    .grid li:nth-child(3):hover ~ li:last-child:before {
+        transform: translate3d(-100%, -200%, 0);
+    }
+    .grid li:nth-child(4):hover ~ li:last-child:after,
+    .grid li:nth-child(4):hover ~ li:last-child:before {
+        transform: translate3d(0%, -200%, 0);
+    }
+    .grid li:nth-child(5):hover ~ li:last-child:after,
+    .grid li:nth-child(5):hover ~ li:last-child:before {
+        transform: translate3d(-100%, -100%, 0);
+    }
+    .grid li:nth-child(6):hover ~ li:last-child:after,
+    .grid li:nth-child(6):hover ~ li:last-child:before {
+        transform: translate3d(0%, -100%, 0);
+    }
+    .grid li:nth-child(7):hover ~ li:last-child:after,
+    .grid li:nth-child(7):hover ~ li:last-child:before {
+        transform: translate3d(-100%, 0%, 0);
+    }
+    .grid li:last-child:hover:after,
+    .grid li:last-child:hover:before {
+        transform: translate3d(0%, 0%, 0);
+    }
+
+    :root {
+        --offset: 0;
+    }
+}
+/*# sourceMappingURL=style2.css.map */
+@media screen and (max-width: 425px) {
+    .calendar {
+        padding-top: 25%;
+        background: linear-gradient(#997F4A, #DCC98E);
+        width: 100%;
+        z-index: 0;
+        height: 90vh;
+    }
+}
+@media screen and (min-width: 426px) and (max-width: 640px){
+    .calendar {
+        padding-top: 25%;
+        background: linear-gradient(#997F4A, #DCC98E);
+        width: 100%;
+        z-index: 0;
+        height: 130vh;
+    }
+    .grid img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        z-index: 0;
+    }
+
+    .grid {
+        display: grid;
+        grid-gap: 0;
+        overflow: hidden;
+        list-style: none;
+        margin: 0;
+        padding: 5%;
+        height: auto;
+        z-index: 0;
+    }
+}
+@media screen and (min-width: 640px) and (max-width: 2000px){
+
+    .grid {
+        display: grid;
+        grid-gap: 0;
+        overflow: hidden;
+        list-style: none;
+        margin: 0;
+        padding: 5%;
+        height:auto;
+        z-index: 0;
+    }
+}
+@media screen and (min-height: 391px) and (max-height: 500px) and (max-width: 600px) {
+    .logo{
+        margin-top: 2%;
+        margin-left: -7%;
+        width:37%;
+    }
+    .elements {
+        padding-left: 0%;
+        margin-left: -8%;
+        text-indent: -55%;
+        flex: 1;
+        text-align: center;
+        display: table;
+        margin-top: 4%;
+        transform: translateY(-50%);
+    }
+}
+@media screen and (max-height: 390px) and (max-width: 600px) {
+    .logo {
+        margin-top: 2%;
+        margin-left: -7%;
+        width: 30%;
+    }
+
+    .elements {
+        padding-left: 0%;
+        margin-left: -11%;
+        text-indent: -55%;
+        flex: 1;
+        text-align: center;
+        display: table;
+        margin-top: 4%;
+        transform: translateY(-50%);
+    }
+}
+@media screen and (min-height: 391px) and (max-height: 600px) and (min-width: 601px) {
+    .logo{
+        margin-top: 1%;
+        margin-left: -4%;
+        width:25%;
+    }
+}
+@media screen and (max-height: 390px) and (min-width: 601px) {
+    .logo {
+        margin-top: 1%;
+        margin-left: -2%;
+        width: 20%;
+    }
+
+}

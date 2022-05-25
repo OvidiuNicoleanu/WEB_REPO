@@ -1,0 +1,140 @@
+.UpperContainer{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 70vh;
+}
+
+.UpperPart{
+    width: 100%;
+    height: 55vh;
+    background: linear-gradient(#997F4A,#DCC98E);
+    display: flex;
+    flex-direction: row;
+    margin-top: 15vh;
+}
+
+.UpperPart .middlePart {
+    width: 20%;
+    height: 100%;
+    background:linear-gradient(#e6ca9a,#997F4A);
+    position: relative;
+    display: flex;
+}
+
+#galleryView1 {
+    height: 100%;
+    width: 40%;
+    z-index: 0;
+}
+
+#galleryContainer1 {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+}
+
+#mainView1 {
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+    background-color: #eb9100;
+    z-index: 1;
+    transition: all 1s;
+    font-size: 4vh;
+}
+
+#galleryView2 {
+    height: 100%;
+    width: 40%;
+    z-index: 0;
+}
+
+#galleryContainer2 {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+#mainView2 {
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+    background-color: #eb9100;
+    z-index: 1;
+    transition: all 1s;
+    font-size: 4vh;
+}
+@media screen and (max-width: 425px){
+    .UpperPart {
+        width: 100%;
+        height: 55vh;
+        background: linear-gradient(#997F4A, #DCC98E);
+        display: flex;
+        flex-direction: row;
+        margin-top: 10vh;
+    }
+    .UpperContainer {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 40vh;
+    }
+
+}
+@media screen and (min-width:426px) and (max-width: 768px){
+    .UpperPart {
+        width: 100%;
+        height: 60vh;
+        background: linear-gradient(#997F4A, #DCC98E);
+        display: flex;
+        flex-direction: row;
+        margin-top: 13vh;
+    }
+    .UpperContainer {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 70vh;
+    }
+
+}
+@media screen and (min-width:426px) and (max-width: 768px){
+    .UpperPart {
+        width: 100%;
+        height: 60vh;
+        background: linear-gradient(#997F4A, #DCC98E);
+        display: flex;
+        flex-direction: row;
+        margin-top: 13vh;
+    }
+    .UpperContainer {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 70vh;
+    }
+
+}
+@media screen and (max-width: 1024px) and (min-width:769px ) {
+    .UpperPart {
+        width: 100%;
+        height: 60vh;
+        background: linear-gradient(#997F4A, #DCC98E);
+        display: flex;
+        flex-direction: row;
+        margin-top: 13vh;
+    }
+    .UpperContainer {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 70vh;
+    }
+}

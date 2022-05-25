@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AGA | Pagina principala</title>
+    <link rel="stylesheet" href="../CSS/Index.css">
+    <link rel = "stylesheet" href="../CSS/EntryStyle.css">
+
+</head>
+<body>
+    <div class="meniu">
+        <img src="../../Resources/Images/logo.png" class="logo" onclick="openImg()" alt="">
+        <nav class="elements">
+            <a href="Index.html">HOME  </a>
+            <a href="Calendar.html">CALENDAR</a>
+            <a href="News.html">NEWS</a>
+            <div id="indicator"></div>
+        </nav>
+        <div class="search">
+            <img src="../../Resources/Images/Magnifier.png" class="magnifier-icon" alt="">
+            <div class="input">
+                <label for="mysearch"></label><input type="text" placeholder="Search" id="mysearch">
+            </div>
+            <span class="clear" onclick="document.getElementById('mysearch').value= ''"></span>
+        </div>
+        <div class="hamburger-menu">
+            <input id="menu__toggle" type="checkbox" />
+            <label class="menu__btn" for="menu__toggle">
+                <span></span>
+            </label>
+
+            <ul class="menu__box">
+                <li><a class="menu__item" href="Index.html">Home</a></li>
+                <li><a class="menu__item" href="FirstPage.html">Celebrities</a></li>
+                <li><a class="menu__item" href="Calendar.html">Calendar</a></li>
+                <ul class="submenu">
+                    <li><a class="submenu__item" href="#">Anual events </a></li>
+                    <li><a class="submenu__item" href="#">Calendar for this month</a></li>
+                </ul>
+                <li><a class="menu__item" href="News.html">News</a></li>
+                <ul class="submenu">
+                    <li><a class="submenu__item" href="ActorPage.html">Actors</a></li>
+                    <li><a class="submenu__item" href="FilmPage.html">Films</a></li>
+                </ul>
+                <li><a class="menu__item" href="AdminLogin.html">Admin Login</a></li>
+                <li><a class="menu__item" href="DashboardAdmin.html">Dashboard</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="tabel">
+        <div class="comandEntry">
+            <div class="multi-button">
+                <button>Add Entry</button>
+                <button>Delete Entry</button>
+                <button>Update Entry</button>
+            </div>
+            <div class="title">
+                <h1>Table</h1>
+            </div>
+            <div class="searchBar">
+                <form  role="search">
+                    <label class="bar" for="search">Search for stuff</label>
+                    <input id="search" type="search" placeholder="Search..." autofocus required />
+                    <button type="submit" class="second">Go</button>
+                </form>
+            </div>
+        </div>
+        <div class="theTabel">
+
+        </div>
+    </div>
+    <script>
+        const icon=document.querySelector('.magnifier-icon');
+        const search=document.querySelector('.search');
+        const nav=document.querySelector('.elements');
+        const clear=document.querySelector('.clear');
+        const menu=document.querySelector('.menu__btn');
+        function openImg(){
+            document.getElementsByClassName('logo');
+            var source = 'FirstPage.html';
+            window.open(source);
+        }
+        icon.onclick=function() {
+            search.classList.toggle('active');
+            nav.classList.toggle('active');
+            clear.classList.toggle('active');
+        }
+        menu.onclick=function ()
+        {
+            search.classList.toggle('active1');
+            nav.classList.toggle('active1');
+        }
+    </script>
+</body>
+</html>

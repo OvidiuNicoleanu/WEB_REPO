@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AGA | Pagina principala</title>
+    <link rel="stylesheet" href="../CSS/Index.css">
+    <link rel="stylesheet" href="../CSS/Calendar.css">
+
+</head>
+<body>
+<div class="meniu">
+    <img src="../../Resources/Images/logo.png" class="logo" onclick="openImg()" alt="">
+    <nav class="elements">
+        <a href="Index.html">HOME</a>
+        <a href="Calendar.html">CALENDAR</a>
+        <a href="News.html">NEWS</a>
+        <div id="indicator"></div>
+    </nav>
+    <div class="search">
+        <img src="../../Resources/Images/Magnifier.png" class="magnifier-icon" alt="">
+        <div class="input">
+            <label for="mysearch"></label><input type="text" placeholder="Search" id="mysearch">
+        </div>
+        <span class="clear" onclick="document.getElementById('mysearch').value= ''"></span>
+    </div>
+    <div class="hamburger-menu">
+        <input id="menu__toggle" type="checkbox" />
+        <label class="menu__btn" for="menu__toggle">
+            <span></span>
+        </label>
+
+        <ul class="menu__box">
+            <li><a class="menu__item" href="Index.html">Home</a></li>
+            <li><a class="menu__item" href="FirstPage.html">Celebrities</a></li>
+            <li><a class="menu__item" href="Calendar.html">Calendar</a></li>
+            <ul class="submenu">
+                <li><a class="submenu__item" href="#">Anual events </a></li>
+                <li><a class="submenu__item" href="#">Calendar for this month</a></li>
+            </ul>
+            <li><a class="menu__item" href="News.html">News</a></li>
+            <ul class="submenu">
+                <li><a class="submenu__item" href="ActorPage.html">Actors</a></li>
+                <li><a class="submenu__item" href="FilmPage.html">Films</a></li>
+            </ul>
+            <li><a class="menu__item" href="AdminLogin.html">Admin Login</a></li>
+            <li><a class="menu__item" href="DashboardAdmin.html">Dashboard</a></li>
+        </ul>
+    </div>
+</div>
+<div class="calendar">
+    <ul class="grid">
+        <li>
+            <a href="#">
+                <img src="../../Resources/Images/AGA2.0.png" alt="">
+                <span class="description">Submissions Open at sagawards.org/submissions</span>
+            </a>
+        </li>
+        <li>
+            <a href="#"><img src="../../Resources/Images/AGA2.1.png" alt="">
+            </a>
+            <span class="description">Submissions Close at 5 p.m. (PT)</span>
+        </li>
+        <li>
+            <a href="#"><img src="../../Resources/Images/AGA2.2.png" alt="">
+                <span class="description">Nominations Voting Opens</span>
+            </a>
+        </li>
+        <li>
+            <a href="#"><img src="../../Resources/Images/AGA2.3.png" alt="">
+                <span class="description">Nominations Voting Closes at 5 p.m. (PT)</span>
+            </a>
+        </li>
+        <li>
+            <a href="#"><img src="../../Resources/Images/AGA2.4.png" alt="">
+                <span class="description">Nominations Announced</span>
+            </a>
+        </li>
+        <li>
+            <a href="#"><img src="../../Resources/Images/AGA2.5.png" alt="">
+                <span class="description">Final Voting Opens</span>
+            </a>
+        </li>
+        <li>
+            <a href="#"><img src="../../Resources/Images/aga2.6.png" alt="">
+                <span class="description">Final Voting Closes at 12 Noon (PT)</span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <img src="../../Resources/Images/AGA2.7.png" alt="">
+                <span class="description">28th Annual Screen Actors Guild Awards Live on TNT and TBS</span>
+            </a>
+        </li>
+    </ul>
+</div>
+
+<script>
+    const icon=document.querySelector('.magnifier-icon');
+    const search=document.querySelector('.search');
+    const nav=document.querySelector('.elements');
+    const clear=document.querySelector('.clear');
+    const menu=document.querySelector('.menu__btn');
+    function openImg(){
+        const source = 'FirstPage.html';
+        window.open(source);
+    }
+    icon.onclick=function() {
+        search.classList.toggle('active');
+        nav.classList.toggle('active');
+        clear.classList.toggle('active');
+    }
+    menu.onclick=function ()
+    {
+        search.classList.toggle('active1');
+        nav.classList.toggle('active1');
+    }
+</script>
+</body>
+</html>
